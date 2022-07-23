@@ -1,5 +1,16 @@
 <script>
-	let offset = 10;
+	let offset = 0;
+
+	function onKeyDown(e) {
+		switch (e.keyCode) {
+			case 37:
+				offset -= 1;
+				break;
+			case 39:
+				offset += 1;
+				break;
+		}
+	}
 </script>
 
 <main class="flex h-screen items-center overflow-hidden">
@@ -14,3 +25,5 @@
 		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</p>
 </main>
+
+<svelte:window on:keydown|preventDefault={onKeyDown} />
