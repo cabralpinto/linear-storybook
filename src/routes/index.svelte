@@ -1,4 +1,6 @@
 <script>
+	import Button from "../lib/Button.svelte";
+	
 	let offset = 0;
 
 	function onKeyDown(e) {
@@ -24,6 +26,8 @@
 		voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</p>
+	<Button style="right: {offset}cm">play</Button>
+	<Button style="right: {offset}cm">play</Button>
 </main>
 
 <svelte:window on:keydown|preventDefault={onKeyDown} />
